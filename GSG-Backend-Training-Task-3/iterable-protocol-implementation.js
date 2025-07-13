@@ -42,6 +42,8 @@ console.log(iterator.next()); // Output: { value: 'Motaz', done: false }
 console.log(iterator.next()); // Output: { value: 'Bellal', done: false }   
 console.log(iterator.next()); // Output: { value: 'yakoub', done: false }
 console.log(iterator.next()); // Output: { done: true }
+console.log(typeof iterator.next()); // Output: 'object'
+  
 
 // no errors, just the end of the iteration.
 console.log(iterator.next()); // Output: { done: true } (no more values to iterate)
