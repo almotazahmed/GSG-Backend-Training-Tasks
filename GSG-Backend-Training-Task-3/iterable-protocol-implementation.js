@@ -1,5 +1,4 @@
-// Iterable Protocol Implementation
-
+//---------------------------------------------------------------------------------------------------------------------------//
 let myIterableObject = {
   //This is an array object that we want to make iterable
   names: [ 'Motaz', 'Bellal', 'yakoub' ],
@@ -47,18 +46,26 @@ console.log(typeof iterator.next()); // Output: 'object'
 
 // no errors, just the end of the iteration.
 console.log(iterator.next()); // Output: { done: true } (no more values to iterate)
+//---------------------------------------------------------------------------------------------------------------------------//
 
 
+//---------------------------------------------------------------------------------------------------------------------------//
 // example of different data structures that support the iterable protocol
 let myName = "Motaz";
 let myNameIterator = myName[ Symbol.iterator ]();
 console.log(myNameIterator.next()); // Output: { value: 'M', done: false }
 console.log(myNameIterator.next()); // Output: { value: 'o', done: false }
+//---------------------------------------------------------------------------------------------------------------------------//
 
 
+//---------------------------------------------------------------------------------------------------------------------------//
 let myMap = new Map([[ "name", "motaz" ], [ "age", 23 ]]);
 let myMapIterator = myMap[ Symbol.iterator ]();
 console.log(myMapIterator.next()); // Output: { value: [ 'name', 'motaz' ], done: false }
 console.log(myMapIterator.next()); // Output: { value: [ 'age', 23 ], done: false }
+console.log(myMapIterator.next()); // Output: { done: true } (no more values to iterate)
+//---------------------------------------------------------------------------------------------------------------------------//
+
+
 
 
