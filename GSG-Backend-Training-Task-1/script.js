@@ -1,20 +1,23 @@
-// 1. ARROW FUNCTION
-const createBook = (title, author) => ({
-  title,
-  author,
+// 1. Object Literal
+const literalBookObject = {
+  title: "home alone",
+  author: "motaz",
   isRead: false,
-  toggleReadStatus() {
+
+  toggleReadStatus () {
     this.isRead = !this.isRead;
   },
-  describe() {
-    return `"${this.title}" by ${this.author} [${this.isRead ? "Read" : "Unread"}]`;
-  }
-});
 
-let arrowBookObject = createBook("home alone", "motaz");
-console.log(arrowBookObject.describe());
-arrowBookObject.toggleReadStatus();
-console.log(arrowBookObject.describe());
+  describe () {
+    return `"${this.title}" By ${this.author} [${
+        this.isRead ? "Read" : "Unread"
+      }]`;
+  }
+}
+
+console.log(literalBookObject.describe());
+literalBookObject.toggleReadStatus();
+console.log(literalBookObject.describe());
 
 
 // 2. FACTORY FUNCTION
